@@ -2,19 +2,63 @@
 const BASE_URL = "http://10.0.2.2:3000";
 
 export async function buscarLivros() {
-  // TODO: implementar
+  try {
+    const response = await fetch(`${BASE_URL}/livros`);
+    if (!response.ok) {
+      throw new Error(`Erro ${response.status}: falha ao buscar livros`);
+    }
+    return response.json();
+  } catch (e) {
+    console.error("buscarLivros", erro.message);
+    throw e;
+  }
 }
 
 export async function buscarLivroPorId(id) {
-  // TODO: implementar
+  try {
+    const response = await fetch(`${BASE_URL}/livros/${id}`);
+    if (!response.ok) {
+      throw new Error(`Erro ${response.status}: falha ao buscar livros`);
+    }
+    return response.json();
+  } catch (e) {
+    console.error("buscarLivroPorId", erro.message);
+    throw e;
+  }
 }
 
-export async function adicionarFavorito(livroId, observacao) {
-  // TODO: implementar
+export async function adicionarFavorito(livroId, observacao = "") {
+  try {
+    const response = await fetch(`${BASE_URL}/favoritos`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" }, // obj - esse é meu tipo de conteúdo
+      body: JSON.stringify({ livroId, observacao }),
+    });
+    if (!response.ok) {
+      const corpo = await response.json().catch(() => ({}));
+      const error = new Error(
+        corpo.error ?? `Erro ${response.status}: falha ao adicionar favoritos`,
+      );
+      error.status = response.status;
+      throw error; // liberando e lançando para o usuário
+    }
+  } catch (e) {
+    console.error("adicionarFavorito:", e.message);
+    throw e;
+  }
 }
 
 export async function listarFavoritos() {
-  // TODO: implementar
+  try {
+    const response = await fetch(`${BASE_URL}/favoritos`);
+    if (!response.ok) {
+      throw new Error(`Erro ${response.status}: falha ao listar favoritos`);
+    }
+    return response.json();
+  } catch (e) {
+    console.error("listarFavoritos:", erro.message);
+    throw erro;
+  }
 }
 
 export async function editarFavorito(id, observacao) {
