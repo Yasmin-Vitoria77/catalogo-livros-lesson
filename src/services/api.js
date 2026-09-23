@@ -9,7 +9,7 @@ export async function buscarLivros() {
     }
     return response.json();
   } catch (e) {
-    console.error("buscarLivros", erro.message);
+    console.error("buscarLivros", error.message);
     throw e;
   }
 }
@@ -22,7 +22,7 @@ export async function buscarLivroPorId(id) {
     }
     return response.json();
   } catch (e) {
-    console.error("buscarLivroPorId", erro.message);
+    console.error("buscarLivroPorId", error.message);
     throw e;
   }
 }
@@ -61,10 +61,33 @@ export async function listarFavoritos() {
   }
 }
 
-export async function editarFavorito(id, observacao) {
-  // TODO: implementar
+export async function editarFavorito(id, observacao = "") {
+  try {
+    const response = await fetch (`${BASE_URL}/favoritos/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ observacao }),
+    });
+    if(!response.ok){
+      throw new Error(`Erro ${response.status}: faha ao editar favorito`)
+    }
+    return response.json();
+  }catch (e){
+    console.error("editarFavorito:", e.message);
+    throw e;
+  }
 }
 
 export async function removerFavorito(id) {
-  // TODO: implementar
+  try {
+    const response = await fetch (`${BASE_URL}/favoritos/${id}`, {
+      method: "DELETE",
+    });
+    if (!response.ok){
+      throw new Error(`Erro ${response.status}: falha ao remover favorito`)
+    }
+  } catch(e){
+    console.error("removerFavorito", e.message);
+    throw e;
+  }
 }

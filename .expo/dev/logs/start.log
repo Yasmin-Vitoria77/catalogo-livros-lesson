@@ -1,0 +1,24 @@
+{"_e":"root:init","_t":1790185366581,"format":"v0-jsonl","version":"57.0.26"}
+{"_e":"env:mode","_t":1790185366595,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790185366622,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1790185369804,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790185375253,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790185378343,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790185396830,"atlas":false,"workers":13,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1790185506260,"id":"5","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1790185506261,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790185506394,"id":"5","total":1,"ms":133.1844}
+{"_e":"metro:client_log","_t":1790185510821,"level":"error","data":["[Error: Uncaught (in promise, id: 0): \"TypeError: \"setCarregando\" is read-only\"]"]}
+{"_e":"metro:client_log","_t":1790185650106,"level":"error","data":["[Error: Uncaught (in promise, id: 1): \"TypeError: \"setCarregando\" is read-only\"]"]}
+{"_e":"metro:client_log","_t":1790185820974,"level":"error","data":["[Error: Uncaught (in promise, id: 2): \"TypeError: \"setCarregando\" is read-only\"]"]}
+{"_e":"metro:client_log","_t":1790185926089,"level":"error","data":["[Error: Uncaught (in promise, id: 3): \"TypeError: \"setCarregando\" is read-only\"]"]}
+{"_e":"metro:bundling:started","_t":1790185946817,"id":"c","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1790185946817,"id":"c","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790185946888,"id":"c","total":1,"ms":71.5338}
+{"_e":"metro:client_log","_t":1790185950200,"level":"error","data":["[Error: Uncaught (in promise, id: 0): \"TypeError: \"setCarregando\" is read-only\"]"]}
+{"_e":"metro:client_log","_t":1790186034072,"level":"error","data":["[Error: Uncaught (in promise, id: 1): \"TypeError: \"setCarregando\" is read-only\"]"]}
+{"_e":"metro:client_log","_t":1790186124793,"level":"error","data":["[Error: Uncaught (in promise, id: 2): \"TypeError: \"setCarregando\" is read-only\"]"]}
+{"_e":"metro:client_log","_t":1790186194574,"level":"error","data":["[Error: Uncaught (in promise, id: 3): \"ReferenceError: Property 'setAdionando' doesn't exist\"]"]}
+{"_e":"metro:client_log","_t":1790186311240,"level":"error","data":["[TypeError: Object is not a function]"]}
+{"_e":"metro:server_log","_t":1790187706618,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.exponent","sdk_gphone64_x86_64 - 16 - API 36","60"]}
+{"_e":"metro:server_log","_t":1790190077065,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.exponent","sdk_gphone64_x86_64 - 16 - API 36","60"]}
