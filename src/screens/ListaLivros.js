@@ -12,9 +12,20 @@ export default function ListaLivros({ navigation }) {
   const [erro, setErro] = useState(null);
 
   const carregar = useCallback(async () => {
-    // TODO: chamar buscarLivros() e atualizar os estados livros, carregando e erro
+    setCarregando(true);
+    setErro(null);
+    try {
+      const dados = await buscarLivros();
+      setLivros(dados);
+    } catch (e){
+      setErro(e.message);
+    } finally {
+      setCarregando(false);
+    }
+
   }, []);
 
+  // sempre que for alterado, vai ficar carregando isso daqui
   useEffect(() => {
     carregar();
   }, [carregar]);
